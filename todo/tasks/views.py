@@ -25,7 +25,7 @@ def updateTask(request, pk):
 	task = Task.objects.get(id=pk)
 
 	form = TaskForm(instance=task)
-
+	
 	if request.method == 'POST':
 		form = TaskForm(request.POST, instance=task)
 		if form.is_valid():
